@@ -10,14 +10,14 @@ Escolhi Java 8 de propósito pra simular um cenário legado.
 
 ## Rodando
 
-docker compose up -d
+docker compose -f docker-compose/docker-compose.yml up -d
 ./mvnw compile quarkus:dev
 
 API sobe em localhost:8080.
 
 ## Endpoints
 
-- POST /contas — abre conta { "documento": "12345678900" }
+- POST /contas/abrir — abre conta { "documento": "12345678900" }
 - POST /contas/deposito — { "numeroConta": 167665, "valor": 100.00 }
 - POST /contas/saque — { "numeroConta": 167665, "valor": 30.00 }
 - POST /contas/transferencia — { "numeroContaOrigem": 167665, "numeroContaDestino": 583921, "valor": 20.00 }

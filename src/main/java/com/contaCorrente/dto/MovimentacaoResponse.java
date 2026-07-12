@@ -1,6 +1,8 @@
 package com.contaCorrente.dto;
 
 
+import com.contaCorrente.entity.Movimentacao;
+
 import java.math.BigDecimal;
 import java.time.Instant;
 import java.util.UUID;
@@ -13,7 +15,7 @@ public class MovimentacaoResponse {
     public BigDecimal saldoApos;
     public Instant dataHora;
 
-    public static MovimentacaoResponse from(com.contaCorrente.entity.Movimentacao mov) {
+    public static MovimentacaoResponse from(Movimentacao mov) {
         MovimentacaoResponse r = new MovimentacaoResponse();
         r.id = mov.id;
         r.numeroConta = mov.conta.numero;

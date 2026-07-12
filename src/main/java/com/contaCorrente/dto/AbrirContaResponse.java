@@ -1,6 +1,8 @@
 package com.contaCorrente.dto;
 
 
+import com.contaCorrente.entity.ContaCorrente;
+
 import java.math.BigDecimal;
 import java.time.Instant;
 import java.util.UUID;
@@ -13,7 +15,7 @@ public class AbrirContaResponse {
     public BigDecimal saldo;
     public Instant dataAbertura;
 
-    public static AbrirContaResponse from(com.contaCorrente.entity.ContaCorrente conta) {
+    public static AbrirContaResponse from(ContaCorrente conta) {
         AbrirContaResponse r = new AbrirContaResponse();
         r.id = conta.id;
         r.numero = conta.numero;
